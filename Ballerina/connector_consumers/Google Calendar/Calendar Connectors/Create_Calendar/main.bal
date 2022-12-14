@@ -18,7 +18,7 @@ public function main() returns error? {
    };
    calendar:Client calendarClient = check new (config);
 
-   calendar:CalendarResource|error res = calendarClient->createCalendar("testCalendar1");
+   calendar:CalendarResource|error res = calendarClient->createCalendar("testCalendar2");
    if (res is calendar:CalendarResource) {
       log:printInfo(res.id);
    } else {

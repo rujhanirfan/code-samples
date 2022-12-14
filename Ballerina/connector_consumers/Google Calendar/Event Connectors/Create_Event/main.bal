@@ -5,7 +5,7 @@ configurable string clientId = ?;
 configurable string clientSecret = ?;
 configurable string refreshToken = ?;
 configurable string refreshUrl = ?;
-configurable string calendarId = "43v5o118g0f6ioj1mku4t5ugbc@group.calendar.google.com";
+configurable string calendarId = "rujhan.programming@gmail.com";
 
 public function main() returns error? {
 
@@ -21,11 +21,13 @@ public function main() returns error? {
 
     calendar:InputEvent event = {
         'start: {
-            dateTime:  "2022-11-23T10:00:00+0530"
+            dateTime:  "2022-11-30T10:00:00+0530"
         },
         end: {
-            dateTime:  "2022-11-23T10:00:00+0530"
+            dateTime:  "2022-11-30T10:00:00+0530"
         },
+        location: "2nd section, HUB-2",
+
         summary: "Sample Event1"
     };
     calendar:Event|error res = calendarClient->createEvent(calendarId, event);
